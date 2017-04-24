@@ -21,7 +21,7 @@ class RoutesController < ApplicationController
     if @route.save
       redirect_to @route
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -31,7 +31,7 @@ class RoutesController < ApplicationController
     if @route.update(route_params)
       redirect_to @route
     else
-      render 'edit'
+      render :edit
     end
   end
 
