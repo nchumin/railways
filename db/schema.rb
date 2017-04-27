@@ -35,11 +35,12 @@ ActiveRecord::Schema.define(version: 20170427103012) do
     t.string   "number"
     t.integer  "user_id"
     t.integer  "train_id"
-    t.integer  "railway_station_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "start_station_id"
     t.integer  "end_station_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.index ["end_station_id"], name: "index_tickets_on_end_station_id"
+    t.index ["start_station_id"], name: "index_tickets_on_start_station_id"
     t.index ["train_id"], name: "index_tickets_on_train_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
@@ -49,10 +50,8 @@ ActiveRecord::Schema.define(version: 20170427103012) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.integer  "route_id"
-    t.integer  "railway_station_id"
     t.integer  "current_station_id"
     t.index ["current_station_id"], name: "index_trains_on_current_station_id"
-    t.index ["railway_station_id"], name: "index_trains_on_railway_station_id"
     t.index ["route_id"], name: "index_trains_on_route_id"
   end
 
