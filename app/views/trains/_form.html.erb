@@ -16,6 +16,11 @@
     <%= f.number_field :number %>
   </div>
 
+  <div class="field">
+    <%= f.label :route, "Маршрут"%>
+    <%= f.collection_select :route_id, Route.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
