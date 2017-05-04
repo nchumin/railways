@@ -1,15 +1,5 @@
-<%= form_for(train) do |f| %>
-  <% if train.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(train.errors.count, "error") %> prohibited this train from being saved:</h2>
-
-      <ul>
-      <% train.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_for(@train) do |f| %>
+  <%= render 'common/errors', resource: @train %>
 
   <div class="field">
     <%= f.label :number %>
@@ -22,6 +12,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{ @train.new_record? ? 'Создать' : 'Изменить' }" %>
   </div>
 <% end %>
