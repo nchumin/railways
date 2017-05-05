@@ -13,5 +13,35 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Количество плацкартных вагонов:</strong>
+  <%= @train.carriages.where(c_type: 'economy').count %>
+</p>
+
+<p>
+  <strong>Количество купейных вагонов:</strong>
+  <%= @train.carriages.where(c_type: 'coupe').count %>
+</p>
+
+<p>
+  <strong>Количество нижних мест в купейных вагонах:</strong>
+  <%= @train.carriages.where(c_type: 'coupe').sum('bottom_seats') %>
+</p>
+
+<p>
+  <strong>Количество верхних мест в купейных вагонах:</strong>
+  <%= @train.carriages.where(c_type: 'coupe').sum('top_seats') %>
+</p>
+
+<p>
+  <strong>Количество нижних мест в плацкартных вагонах:</strong>
+  <%= @train.carriages.where(c_type: 'economy').sum('bottom_seats') %>
+</p>
+
+<p>
+  <strong>Количество верхних мест в плацкартных вагонах:</strong>
+  <%= @train.carriages.where(c_type: 'economy').sum('top_seats') %>
+</p>
+
 <%= link_to 'Редактировать', edit_train_path(@train) %> |
 <%= link_to 'Назад', trains_path %>
