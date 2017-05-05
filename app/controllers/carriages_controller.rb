@@ -1,0 +1,2 @@
+class CarriagesController < ApplicationController
+end
