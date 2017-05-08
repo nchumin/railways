@@ -13,5 +13,35 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Количество плацкартных вагонов:</strong>
+  <%= @train.count_carriages('economy') %>
+</p>
+
+<p>
+  <strong>Количество купейных вагонов:</strong>
+  <%= @train.count_carriages('coupe') %>
+</p>
+
+<p>
+  <strong>Количество нижних мест в купейных вагонах:</strong>
+  <%= @train.count_bottom_seats('coupe') %>
+</p>
+
+<p>
+  <strong>Количество верхних мест в купейных вагонах:</strong>
+  <%= @train.count_bottom_seats('coupe') %>
+</p>
+
+<p>
+  <strong>Количество нижних мест в плацкартных вагонах:</strong>
+  <%= @train.count_bottom_seats('economy') %>
+</p>
+
+<p>
+  <strong>Количество верхних мест в плацкартных вагонах:</strong>
+  <%= @train.count_bottom_seats('economy') %>
+</p>
+
 <%= link_to 'Редактировать', edit_train_path(@train) %> |
 <%= link_to 'Назад', trains_path %>

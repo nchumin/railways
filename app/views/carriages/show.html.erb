@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Тип вагона:</strong>
+  <%= @carriage.c_type %>
+</p>
+
+<p>
+  <strong>Присоединен к поезду:</strong>
+  <%= @carriage.train.number %>
+</p>
+
+<p>
+  <strong>Мест верхних:</strong>
+  <%= @carriage.top_seats %>
+</p>
+
+<p>
+  <strong>Мест нижних:</strong>
+  <%= @carriage.bottom_seats %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_carriage_path(@carriage) %> |
+<%= link_to 'Назад', carriages_path %>
