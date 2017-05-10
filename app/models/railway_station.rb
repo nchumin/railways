@@ -4,4 +4,15 @@ class RailwayStation < ApplicationRecord
   has_many :routes, through: :railway_stations_routes
 
   validates :name, presence: true
+
+  def update_position(route, position)
+    station_route = station_route(route)
+    station_route.update(position: position) if station_route
+  end
+
+  protected
+
+  def station_route(route)
+    @station_route ||= railway_stations_routes.where(route: route).first
+  end
 end
