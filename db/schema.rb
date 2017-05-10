@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170510153317) do
     t.datetime "updated_at",        null: false
     t.integer  "side_top_seats"
     t.integer  "side_bottom_seats"
+    t.integer  "sitting_seats"
     t.string   "type"
     t.index ["train_id"], name: "index_carriages_on_train_id"
   end
