@@ -1,3 +1,3 @@
 class LuxeCarriage < Carriage
-  validation :bottom_seats, presence: true
+  validates :bottom_seats, presence: true
 end
