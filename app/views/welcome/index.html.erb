@@ -1,2 +1,7 @@
-<h1>Добро пожаловать</h1>
-<%= link_to 'Мое приложение', controller: 'routes' %>
+<h1>Управление на железной дороге</h1>
+<ul>
+  <li><%= link_to 'Станции', controller: 'railway_stations' %></li>
+  <li><%= link_to 'Маршруты', controller: 'routes' %></li>
+  <li><%= link_to 'Поезда', controller: 'trains' %></li>
+  <li><%= link_to 'Вагоны', controller: 'carriages' %></li>
+</ul>
