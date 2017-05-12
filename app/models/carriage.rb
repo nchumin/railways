@@ -12,6 +12,9 @@ class Carriage < ApplicationRecord
   scope :sitting, -> { where(type: 'SittingCarriage') }
   scope :ordered, -> { order(:number) }
 
+  scope :sorted_up, -> { order(number: :asc) }
+  scope :sorted_down, -> { order(number: :desc) }
+
   private
 
   def set_number

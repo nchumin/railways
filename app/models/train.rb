@@ -9,4 +9,8 @@ class Train < ApplicationRecord
   def count_seats(carriage_type, seats_type)
     carriages.where(type: carriage_type).sum(seats_type)
   end
+
+  def sorted_carriages
+    head_sort ? carriages.sorted_up : carriages.sorted_down
+  end
 end
