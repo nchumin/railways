@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510153317) do
+ActiveRecord::Schema.define(version: 20170512094210) do
 
   create_table "carriages", force: :cascade do |t|
     t.integer  "number"
     t.integer  "top_seats"
     t.integer  "bottom_seats"
     t.integer  "train_id"
-    t.string   "c_type"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "side_top_seats"
