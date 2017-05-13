@@ -2,7 +2,12 @@
 
 <p>
   <strong>Тип вагона:</strong>
-  <%= @carriage.c_type %>
+  <%= @carriage.type %>
+</p>
+
+<p>
+  <strong>Номер вагона:</strong>
+  <%= @carriage.number %>
 </p>
 
 <p>
@@ -10,16 +15,7 @@
   <%= @carriage.train.number %>
 </p>
 
-<p>
-  <strong>Мест верхних:</strong>
-  <%= @carriage.top_seats %>
-</p>
-
-<p>
-  <strong>Мест нижних:</strong>
-  <%= @carriage.bottom_seats %>
-</p>
-
+<%= render @carriage.type.underscore %>
 
 <%= link_to 'Редактировать', edit_carriage_path(@carriage) %> |
 <%= link_to 'Назад', carriages_path %>
