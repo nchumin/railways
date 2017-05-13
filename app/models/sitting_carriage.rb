@@ -1,3 +1,3 @@
 class SittingCarriage < Carriage
-  validation :sitting_seats, presence: true
+  validates :sitting_seats, presence: true
 end

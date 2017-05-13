@@ -27,7 +27,7 @@ class CarriagesController < ApplicationController
 
   def update
     if @carriage.update(carriage_params)
-      redirect_to @carriage
+      redirect_to carriages_path, notice: 'Вагон изменен.'
     else
       render :edit
     end
