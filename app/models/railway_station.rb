@@ -22,7 +22,8 @@ class RailwayStation < ApplicationRecord
   end
 
   def time(route, type_time)
-    station_route(route).try(type_time)
+    time = station_route(route).try(type_time)
+    time.strftime("%H:%M") if time
   end
 
   protected
