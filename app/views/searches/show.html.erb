@@ -35,7 +35,7 @@
           <td><%= "№#{train.number} #{train.route.name}" %></td>
           <td><%= "#{@start_station.name} - #{@start_station.time(train.route, :departure_time)} "%></td>
           <td><%= "#{@end_station.name} - #{@end_station.time(train.route, :arrival_time)} "%></td>
-          <td></td>
+          <td><%= link_to 'Купить билет', new_ticket_path(train_id: train.id, start_station_id: @start_station, end_station_id: @end_station) %></td>
         </tr>
       <% end %>
     </tbody>
