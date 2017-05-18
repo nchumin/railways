@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  before_action :authenticate_user!, only: :create
 
   def new
     @ticket = Ticket.new
