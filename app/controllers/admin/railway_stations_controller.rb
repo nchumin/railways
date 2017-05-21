@@ -1,6 +1,5 @@
 class Admin::RailwayStationsController < Admin::BaseController
   before_action :set_railway_station, only: [:show, :edit, :update, :destroy, :update_position, :update_time]
-  before_action :authenticate_user!
 
   # GET /railway_stations
   def index
