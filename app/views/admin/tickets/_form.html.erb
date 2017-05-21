@@ -1,0 +1,16 @@
+<%= form_for [:admin, ticket] do |f| %>
+  <%= render 'common/errors', resource: @ticket %>
+  <div class="field">
+    <%= f.label :passenger_name, 'Имя пассажира' %>
+    <%= f.text_field :passenger_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passport_number, 'Номер паспорта' %>
+    <%= f.text_field :passport_number %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Изменить" %>
+  </div>
+<% end %>
