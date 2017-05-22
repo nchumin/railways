@@ -1,19 +1,25 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-  root 'welcome#index'
+  devise_for :users
 
-  resources :trains do
-    resources :carriages
-  end
+  root 'searches#show'
 
-  resources :railway_stations do
-    patch :update_position, on: :member
-    patch :update_time, on: :member
-  end
-  resources :routes
-  resources :carriages
   resources :tickets
-
   resource :search, only: [:show, :create]
+
+  namespace :admin do
+
+    resources :railway_stations do
+      patch :update_position, on: :member
+      patch :update_time, on: :member
+    end
+
+    resources :trains do
+      resources :carriages
+    end
+
+    resources :routes
+    resources :tickets
+    resources :panel, only: [:index]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

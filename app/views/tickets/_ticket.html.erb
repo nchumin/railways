@@ -1,0 +1,8 @@
+<tr>
+  <td><%= ticket.train.number %></td>
+  <td><%= ticket.start_station.name %></td>
+  <td><%= ticket.end_station.name %></td>
+  <td><%= ticket.passenger_name %></td>
+  <td><%= link_to 'Показать', ticket %></td>
+  <td><%= link_to 'Удалить', ticket, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+</tr>
