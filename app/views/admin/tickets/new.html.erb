@@ -1,38 +1,38 @@
-<h1>Создание билетов</h1>
+<h1><%= t('.title')%></h1>
 
 <%= form_for [:admin, @ticket] do |f| %>
   <%= render 'common/errors', resource: @ticket %>
 
   <div class="field">
-    <%= f.label :user_id, "Пользователь" %>
+    <%= f.label :user_id %>
 		<%= f.select :user_id, options_from_collection_for_select(@users, :id, :email) %>
   </div>
 
   <div class="field">
-    <%= f.label :train_id, "Поезд" %>
+    <%= f.label :train_id %>
 		<%= f.select :train_id, options_from_collection_for_select(@trains, :id, :number) %>
   </div>
 
   <div class="field">
-    <%= f.label :start_station_id, "Начальная станция" %>
+    <%= f.label :start_station_id %>
 		<%= f.select :start_station_id, options_from_collection_for_select(@stations, :id, :name) %>
   </div> 
 
 	<div class="field">
-    <%= f.label :end_station_id, "Конечная станция" %>
+    <%= f.label :end_station_id %>
 		<%= f.select :end_station_id, options_from_collection_for_select(@stations, :id, :name) %>
   </div>
 
   <div class="field">
-    <%= f.label :passenger_name, 'Имя пассажира' %>
+    <%= f.label :passenger_name %>
     <%= f.text_field :passenger_name %>
   </div>
 
   <div class="field">
-    <%= f.label :passport_number, 'Номер паспорта' %>
+    <%= f.label :passport_number %>
     <%= f.text_field :passport_number %>
   </div>
 
-  <%= f.submit 'Создать' %>
+  <%= f.submit t('common.create') %>
 
 <% end %>

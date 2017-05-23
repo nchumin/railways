@@ -1,2 +1,65 @@
 ru:
-  hello: "Привет Мир!"
+  common:
+    back: 'Назад'
+    show: 'Показать'
+    edit: 'Редактировать'
+    delete: 'Удалить'
+    create: 'Создать'
+    sure: 'Вы уверены?'
+    errors: 'При заполнении формы возникли ошибки'
+  admin:
+    railway_stations:
+      new:
+        name: 'Новая станция'
+      form:
+        submit: '%{action} станцию'
+      edit: 
+        title: 'Редактирование станции'
+      show:
+        name: 'Название:'
+      index:
+        title: 'Железнодорожные станции'
+        name: 'Название'
+    routes:
+      new:
+        title: 'Новый маршрут'
+      form: 
+        submit: '%{action} маршрут'
+      edit:
+        title: 'Редактирование маршрута'
+      index: 
+        title: 'Маршруты'
+        name: 'Название'
+      show:
+        name: 'Название:'
+        trains_on_route: 'Поезда на маршруте:'
+        no_trains: 'Поездов нет'
+        stations_on_route: 'Станции на маршруте:'
+        no_stations: 'Станций нет'
+        position: 'Позиция'
+        arrival_time: 'Время прибытия'
+        departure_time: 'Время отправления'
+    tickets:
+      form:
+        passenger
+      edit:
+        title: 'Редактирование билета'
+      index:
+        title: 'Билет'
+        train: 'Поезд'
+        departure: 'Отправление'
+        arrival: 'Прибытие'
+        full_name: 'ФИО'
+      new:
+        title: 'Создание билета'
+        user_id:
+        train_id:
+        start_station_id:
+        end_station_id:
+      show:
+        title: 'Билет'
+        train: 'Поезд:'
+        departure: 'Отправление:'
+        arrival: 'Прибытие:'
+        full_name: 'ФИО:'
+        passport: 'Номер паспорта:'
