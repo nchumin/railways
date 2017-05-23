@@ -5,6 +5,7 @@ class Train < ApplicationRecord
   has_many :carriages
 
   validates :number, presence: true
+  validates :head_sort, presence: true
 
   scope :station_on_route, ->(station) { joins(route: :railway_stations).where("railway_station_id = ?", station) }
 
