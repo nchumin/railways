@@ -14,6 +14,10 @@ class Admin::TicketsController < Admin::BaseController
 
   def create
     @ticket = Ticket.new(ticket_params)
+    @users = User.all
+    @trains = Train.all 
+    @stations = RailwayStation.all # todo
+
     if @ticket.save
       redirect_to admin_tickets_path, notice: 'Билет успешно создан'
     else
