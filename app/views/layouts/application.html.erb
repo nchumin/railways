@@ -45,12 +45,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Railway</a>
+        <a class="navbar-brand" href="/">Railway</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to t('.tickets'), tickets_path %></li>
+              <li><%= link_to t('common.sign_out'), destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to t('common.login'), new_user_session_path %></li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -58,25 +61,14 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
       </div><!--/row-->
 
       <footer>
-        <p>&copy; 2017 Чумин Николай. Учебный проект в <a href="http://www.thinknetica.com/">онлайн-школе "Thinknetica".</a</p>
+        <p><%= t('.copyright') %> <a href="http://www.thinknetica.com/">онлайн-школе "Thinknetica".</a</p>
       </footer>
 
     </div> <!-- /container -->

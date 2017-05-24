@@ -5,12 +5,12 @@
 
   <div class="field">
     <%= f.label :passenger_name, 'ФИО пассажира' %>
-    <%= f.text_field :passenger_name %>
+    <%= f.text_field :passenger_name, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :passport_number, 'Номер паспорта' %>
-    <%= f.text_field :passport_number %>
+    <%= f.text_field :passport_number, class: 'form-control' %>
   </div>
 
   <%= f.hidden_field :train_id, value: params[:train_id] %>
@@ -18,7 +18,7 @@
   <%= f.hidden_field :end_station_id, value: params[:end_station_id] %>
 
   <div class="actions">
-    <%= f.submit "Купить" %>
+    <%= f.submit "Купить", class: 'btn btn-primary find' %>
   </div>
 
 <% end %>

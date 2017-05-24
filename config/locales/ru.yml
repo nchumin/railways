@@ -1,4 +1,11 @@
 ru:
+  layouts:
+    application:
+      copyright: '2017 Чумин Николай. Учебный проект в '
+      tickets: 'Мои билеты'
+    admin:
+      copyright: '2017 Чумин Николай. Учебный проект в '
+      panel: "Админ-панель"    
   common:
     back: 'Назад'
     show: 'Показать'
@@ -7,6 +14,8 @@ ru:
     create: 'Создать'
     sure: 'Вы уверены?'
     errors: 'При заполнении формы возникли ошибки'
+    sign_out: 'Выйти'
+    login: 'Войти'
   admin:
     railway_stations:
       new:
