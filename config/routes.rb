@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resource :search, only: [:show, :create]
 
   namespace :admin do
+    root 'panel#index'
 
     resources :railway_stations do
       patch :update_position, on: :member

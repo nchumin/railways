@@ -12,6 +12,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :current_station%>
+    <%= f.collection_select :current_station, RailwayStation.all, :id, :name %>
+  </div>
+
+  <div class="field">
     <%= f.label :head_sort, "Нумерация c головы поезда"%>
     <%= f.radio_button :head_sort, true %>
     <%= f.label :tail_sort, "c хвоста поезда"%>

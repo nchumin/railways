@@ -1,26 +1,26 @@
 <h1>Поиск билетов</h1>
 
-<%= form_tag search_path do%>
+<%= form_tag search_path, class: 'form-horizontal', role: 'form' do%>
 
-  <div class="field">
+  <div class="form-group">
     <%= label_tag :start_station, "Начальная станция" %>
-		<%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :name) %>
+		<%= select_tag :start_station, options_from_collection_for_select(@stations, :id, :name), class: 'form-control' %>
   </div> 
 
-	<div class="field">
+	<div class="form-group">
     <%= label_tag :end_station, "Конечная станция" %>
-		<%= select_tag :end_station, options_from_collection_for_select(@stations, :id, :name) %>
+		<%= select_tag :end_station, options_from_collection_for_select(@stations, :id, :name), class: 'form-control' %>
   </div>   
 
-  <div class="actions">
-    <%= submit_tag "Найти" %>
+  <div class="form-group">
+    <%= submit_tag "Найти", class: 'btn btn-primary find' %>
   </div>
 
 <% end %>
 
 <% if @trains %>
 <p>Результаты поиска</p>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <td>Поезд</td>
