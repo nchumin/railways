@@ -34,6 +34,7 @@ gem 'devise'
 gem 'therubyracer'
 gem 'rails_12factor'
 gem 'twitter-bootstrap-rails'
+gem 'sendgrid-ruby'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
