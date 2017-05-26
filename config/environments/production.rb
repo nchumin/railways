@@ -89,8 +89,8 @@ Rails.application.configure do
       :address        => "smtp.sendgrid.net",
       :port           => "25",
       :authentication => :plain,
-      :user_name      => ENV['API_KEY'],
-      :password       => ENV['SENDGRID_KEY'],
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
       :domain         => 'thawing-bayou-67083.herokuapp.com'
   }
 end
