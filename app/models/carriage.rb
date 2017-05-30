@@ -18,6 +18,10 @@ class Carriage < ApplicationRecord
   private
 
   def set_number
-    self.number ||= train.carriages.maximum(:number) + 1
+    if train.carriages.maximum(:number).nil?
+      self.number = 1
+    else
+      self.number = train.carriages.maximum(:number) + 1
+    end
   end
 end
