@@ -1,3 +1,4 @@
+<%= hidden = false unless local_assigns[:hidden] %>
 <%= form_for [:admin, train], html: { style: "display: #{hidden ? 'none' : 'block'}" } do |f| %>
   <%= render 'common/errors', resource: train %>
 
