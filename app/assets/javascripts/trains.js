@@ -9,8 +9,6 @@ $(document).on('turbolinks:load', function() {
         form = $('#edit_train_' + train_id);
         number = $('#train_number_' + train_id);
 
-        console.log()
-
         if (!$(this).hasClass('cancel')) {
             $(this).html('Отмена');
             $(this).addClass('cancel');

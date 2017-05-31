@@ -9,8 +9,6 @@ $(document).on('turbolinks:load', function() {
         form = $('#edit_route_' + route_id);
         title = $('#railway_station_title_' + route_id);
 
-        console.log()
-
         if (!$(this).hasClass('cancel')) {
             $(this).html('Отмена');
             $(this).addClass('cancel');
